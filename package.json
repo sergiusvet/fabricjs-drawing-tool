@@ -1,0 +1,16 @@
+{
+  "name": "canvas-drawing",
+  "version": "1.0.0",
+  "description": "Canvas drawing using fabric.js and syncing using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fabric": "^2.2.4",
+    "socket.io": "^2.1.1"
+  }
+}

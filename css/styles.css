@@ -1,0 +1,32 @@
+.full-height {
+    height: calc(100vh - 50px);
+}
+
+#content {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#content img, #content video {
+    width: 100%;
+}
+
+#c {
+    position: relative;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
+}
+
+#brushColor {
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0;
+}
+

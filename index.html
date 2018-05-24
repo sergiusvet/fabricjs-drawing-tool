@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/spacing.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="ui container" style="height: calc(100vh - 100px)">
+        <div class="ui celled grid" style="height: calc(100vh - 100px);">
+            <div class="fourteen wide column" style="height: calc(100vh - 100px);" >
+                <div id="content" style="width: 100%; position: absolute; z-index: 1; top: 0; left: 0; right: 0;">
+                    <img style="width: 100%;" src="https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?cs=srgb&dl=plant-flower-bloom-36764.jpg&fm=jpg" alt="">
+                    <!--<video style="width: 100%;" src="http://techslides.com/demos/sample-videos/small.mp4" controls autoplay="true"></video>-->
+                </div>
+                <div id="canvasWrapper" style="height: 100%;">
+                    <canvas id="c" style="position: relative; z-index: 9999; top: 0; bottom: 0;"></canvas>
+                </div>
+            </div>
+            <div class="two wide column center aligned ">
+
+                <div class="">
+                    <label class="mt2">Brush size</label>
+                    <hr class="my0">
+
+                    <div class="ui icon buttons size-btns mt1">
+                        <button class="ui button active" onclick="setBrush({width: 5})">S</button>
+                        <button class="ui button" onclick="setBrush({width: 10})">M</button>
+                        <button class="ui button" onclick="setBrush({width: 15})">L</button>
+                    </div>
+                </div>
+
+                <div class="mt2">
+                    <label>Brush color</label>
+                    <hr class="my0">
+                    <div class="ui icon buttons color-btns mt1">
+                        <button class="ui black active button" data-value="#000000">­</button>
+                        <button class="ui red button" data-value="#D01919">­</button>
+                        <button class="ui yellow button" data-value="#EAAE00">­</button>
+                        <button class="ui green button" data-value="#16AB39">­</button>
+                        <button class="ui blue button" data-value="#1678C2">­</button>
+                    </div>
+                    <div class="mt1">
+                        <input type="color" id="brushColor" style="width: 100%; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; padding: 0;">
+                    </div>
+
+                </div>
+
+
+
+                <div class="mt2" id="toolbox">
+                    <label>Drawing tools</label>
+                    <hr class="my0">
+
+                    <div class="ui icon buttons mt1">
+                        <button class="ui button" id="drwToggleDrawMode">
+                            <i class="pencil alternate icon"></i>
+                        </button>
+
+                        <button class="ui button" id="drwEraser">
+                            <i class="eraser icon"></i>
+                        </button>
+
+                        <button class="ui button" id="drwClearCanvas">
+                            <i class="trash alternate outline icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="ui icon buttons mt1">
+                        <button class="ui button" id="shapeRect">
+                            <i class="square outline icon"></i>
+                        </button>
+                        <button class="ui button" id="shapeCircle">
+                            <i class="circle outline icon"></i>
+                        </button>
+                        <button class="ui button" id="shapeArrow">
+                            <i class="long arrow alternate right icon"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="mt2">
+                    <label >Debug</label>
+                    <hr class="my0">
+                    <button class="ui basic red icon button mt1" id="debugButton"><i class="icon bug"></i></button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/semantic.js"></script>
+    <script src="js/fabric.min.js"></script>
+    <script src="js/shapes.fabric.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
